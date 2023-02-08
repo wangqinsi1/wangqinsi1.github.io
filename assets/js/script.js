@@ -74,6 +74,47 @@ for (let i = 0; i < selectItems.length; i++) {
 
   });
 }
+let lastClickedBtn = filterBtn[0];
+const project1 = document.getElementById("project1");
+project1.onclick = function(){
+  selectValue.innerText="Machine Learning";
+  elementToggleFunc(select);
+  filterFunc("machine learning");
+
+  lastClickedBtn.classList.remove("active");
+  filterBtn[1].classList.add("active");
+  lastClickedBtn = filterBtn[1];
+}
+const project2 = document.getElementById("project2");
+project2.onclick = function(){
+  selectValue.innerText="Natural Language Processing";
+  elementToggleFunc(select);
+  filterFunc("natural language processing")
+
+  lastClickedBtn.classList.remove("active");
+  filterBtn[2].classList.add("active");
+  lastClickedBtn = filterBtn[2];
+}
+const project3 = document.getElementById("project3");
+project3.onclick = function(){
+  selectValue.innerText="Computer Vision";
+  elementToggleFunc(select);
+  filterFunc("computer vision")
+
+  lastClickedBtn.classList.remove("active");
+  filterBtn[3].classList.add("active");
+  lastClickedBtn = filterBtn[3];
+}
+const project4 = document.getElementById("project4");
+project4.onclick = function(){
+  selectValue.innerText="Mathematical Modeling";
+  elementToggleFunc(select);
+  filterFunc("mathematical modeling")
+
+  lastClickedBtn.classList.remove("active");
+  filterBtn[4].classList.add("active");
+  lastClickedBtn = filterBtn[4];
+}
 
 // filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
@@ -94,7 +135,6 @@ const filterFunc = function (selectedValue) {
 }
 
 // add event in all filter button items for large screen
-let lastClickedBtn = filterBtn[0];
 
 for (let i = 0; i < filterBtn.length; i++) {
 
@@ -155,4 +195,24 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
 
   });
+}
+
+// 处理图像点击效果
+var modal = document.getElementById("myModal");
+const imgs = document.getElementsByClassName("project-img-zoom");
+var modal1Img = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+for (let i = 0; i < imgs.length; i++) {
+  imgs[i].onclick = function () {
+    modal.style.display = "block";
+    modal1Img.src = this.children[0].src;
+  };
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
 }
