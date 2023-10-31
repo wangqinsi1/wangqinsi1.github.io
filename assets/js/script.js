@@ -87,9 +87,9 @@ project1.onclick = function(){
 }
 const project2 = document.getElementById("project2");
 project2.onclick = function(){
-  selectValue.innerText="Natural Language Processing";
+  selectValue.innerText="Reinforcement Learning";
   elementToggleFunc(select);
-  filterFunc("natural language processing")
+  filterFunc("reinforcement learning")
 
   lastClickedBtn.classList.remove("active");
   filterBtn[2].classList.add("active");
@@ -97,9 +97,9 @@ project2.onclick = function(){
 }
 const project3 = document.getElementById("project3");
 project3.onclick = function(){
-  selectValue.innerText="Computer Vision";
+  selectValue.innerText="Mathematical Modeling";
   elementToggleFunc(select);
-  filterFunc("computer vision")
+  filterFunc("mathematical modeling")
 
   lastClickedBtn.classList.remove("active");
   filterBtn[3].classList.add("active");
@@ -107,9 +107,9 @@ project3.onclick = function(){
 }
 const project4 = document.getElementById("project4");
 project4.onclick = function(){
-  selectValue.innerText="Mathematical Modeling";
+  selectValue.innerText="Other Projects";
   elementToggleFunc(select);
-  filterFunc("mathematical modeling")
+  filterFunc("other projects")
 
   lastClickedBtn.classList.remove("active");
   filterBtn[4].classList.add("active");

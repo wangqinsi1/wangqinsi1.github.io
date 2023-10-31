@@ -220,12 +220,15 @@ article.active {
   100% { opacity: 1; }
 }
 
+
+.h3{
+  color:var(--vegas-gold);
+  text-transform: capitalize;
+}
 .h2,
-.h3,
 .h4,
 .h5 {
   color: var(--white-2);
-  text-transform: capitalize;
 }
 
 .h2 { font-size: var(--fs-1); }
@@ -274,7 +277,7 @@ article.active {
 
 .content-card {
   position: relative;
-  background: var(--border-gradient-onyx);
+  background: var(--orange-yellow-crayola);
   padding: 5px;
   padding-top: 5px;
   border-radius: 5px;
@@ -450,6 +453,8 @@ main {
 
 
 
+
+
 /*-----------------------------------*\
   #NAVBAR
 \*-----------------------------------*/
@@ -505,7 +510,16 @@ main {
 }
 
 .about-text p { margin-bottom: 15px; }
+.about-text a {
+  text-decoration: underline;
+  color: var(--white-1);
+  white-space: nowrap;
+  text-overflow : ellipsis;
+}
 
+.about-text b {
+  color: var(--white-1);
+}
 
 
 /**
@@ -786,11 +800,15 @@ main {
 }
 
 .timeline-item { position: relative; }
+.timeline-item b {
+  color: var(--white-1);
+}
 
 .timeline-item:not(:last-child) { margin-bottom: 20px; }
 
 .timeline-item-title {
-  font-size: var(--fs-6);
+  color: var(--white-1);
+  font-size: var(--fs-7);
   line-height: 1.3;
   margin-bottom: 7px;
 }
@@ -1012,6 +1030,7 @@ main {
 .project-title,
 .project-title1,
 .project-title2,
+.project-title3,
 .project-category { margin-left: 10px; }
 
 .project-title {
@@ -1031,12 +1050,28 @@ main {
   margin-bottom: 15px;
 }
 
+.project-title1 b {
+  color: var(--white-1);
+}
+.project-title3 a {
+  text-decoration: underline;
+  color: var(--vegas-gold);
+}
+
 .project-title2 {
   color: var(--white-2);
   font-size: 7;
   font-weight: 2px;
   line-height: 1.6; 
   width:200%; 
+}
+
+.project-title3 {
+  color: var(--vegas-gold);
+  font-size: 3;
+  line-height: 1.6; 
+  width:200%; 
+  margin-bottom: 15px;
 }
 
 .project-category {
@@ -1989,3 +2024,4 @@ body {font-family: Arial, Helvetica, sans-serif;}
     width: 100%;
   }
 }
+
