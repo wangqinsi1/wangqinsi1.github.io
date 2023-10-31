@@ -847,6 +847,11 @@ main {
   line-height: 1.6;
 }
 
+.timeline-text a {
+  text-decoration: underline;
+  color: var(--white-1);
+}
+
 
 /**
  * skills 
