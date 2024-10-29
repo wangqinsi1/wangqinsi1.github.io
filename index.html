@@ -1,1419 +1,281 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wang Qinsi - Personal Portfolio</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qinsi Wang - Research homepage</title>
+	<link rel="icon" href="AboutPageAssets/images/logo.png" type="image/x-icon">
+<link href="AboutPageAssets/styles/aboutPageStyle.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page.-->
+<!--<script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/montserrat:n4:default;source-sans-pro:n2:default.js" type="text/javascript"></script>-->
 </head>
 
 <body>
-
-  <!--
-    - #MAIN
-  -->
-
-  <main>
-    <div id="myModal" class="modal" style='position:fixed; z-index:999; top:0;'>
-      <span class="close">&times;</span>
-      <img class="modal-content" id="img01">
-      <div id="caption"></div>
-    </div>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Wang Qinsi</h1>
-
-          <p class="title">R.A. in USTC</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:wqs@mail.ustc.edu.cn" class="contact-link">wqs@mail.ustc.edu.cn</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+8615972166062" class="contact-link">+86 15972166062</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Website</p>
-
-              <time datetime="2000-05-29">https://wangqinsi1.github.io</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Wuhan, Hubei, China</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-         
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Porject</button>
-          </li>
-
-         
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Personal</button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-           Hello, I am applying for my PhD in 2024. Before that, I worked as a research assistant at the University of Science and Technology of China (USTC) for one year.
-During this period, I visited and served as a research intern at the National University of Singapore (NUS), where I was advised by <a href="https://linsats.github.io/" style="display:inline;"> Prof. Shao Lin </a>. I received my bachelor's degree from Huazhong University of Science and Technology (HUST) in 2022.
-          </p>
-
-          <p>
-            My previous research work focused on machine learning algorithm optimization and application: Automatic design of neural network architecture; Differentiable Reinforcement Learning; Acceleration for Mobile Computing.
-          </p>
-        
-        </section>
-
-
-
-
-
-          <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">News</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title"></h4>
-              <p class="timeline-text">
-              [Sep 2023] Our <a href="https://neurips.cc/virtual/2023/poster/70987" style="display:inline;"> MathNAS </a> on rapid network architecture design is accepted by <b> NeurIPS! </b>
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title"></h4>
-              <p class="timeline-text">
-              [Apr 2023] Our <a href="https://ieeexplore.ieee.org/document/10042973" style="display:inline;"> DGL </a> on mobile device latency prediction is accepted by the <b> IEEE Transaction on Mobile Computing </b> !
-              </p>
-
-            </li>
-
-             <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title"></h4>
-              <p class="timeline-text">
-             [July 2022] I received my B.S. from Huazhong University of Science and Technology (HUST) and received the title of <b> Outstanding Graduate </b> !
-              </p>
-
-            </li>
-            
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title"></h4>
-              <p class="timeline-text">
-             [Sep 2021] I won the <b> Chinese National Scholarship (0.2%) </b>!
-              </p>
-
-            </li>
-
-            
-
-            
-
-          </ol>
-
-        </section>
-
-
-
-
-
-
-
-
-
-        <!--
-          - service
-        -->
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Publications & Manuscripts</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title"></h4>
-              <p class="timeline-text">
-                <b> Wang Qinsi* </b>, Jinhan Ke*, Zhi Liang, Sihai Zhang, MathNAS: If Blocks Have a Role in Mathematical Architecture Design, NeurIPS, 2023.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title"></h4>
-              <p class="timeline-text">
-              <b> Wang Qinsi </b>, Zhang Sihai, "DGL: Device Generic Latency model for Neural Architecture
-Search on Mobile Devices.", IEEE Transactions on Mobile Computing, 2023.
-              </p>
-
-            </li>
-
-             <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title"></h4>
-              <p class="timeline-text">
-              Yuqi Xiang, Feitong Chen, <b> Wang Qinsi </b>, Gang Yang, Xiang Zhang, Xinghao Zhu, Xingyu Liu, Lin Shao, "Diff-Transfer: Model-based Robotic Manipulation Skill Transfer via Differentiable Physics Simulation.", submitted to ICLR, 2023.
-              </p>
-
-            </li>
-
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title"></h4>
-              <p class="timeline-text">
-              <b> Wang Qinsi </b>, Jiang Xueyi, Xiao Xiaolong. "Research on Invasive Insect Image Recognition Based on Artificial Intelligence." 2021 IEEE 2nd International Conference on Big Data, Artificial Intelligence
-and Internet of Things Engineering (ICBAIE). IEEE, 2021.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title"></h4>
-              <p class="timeline-text">
-             <b> Wang Qinsi </b>, He Yuhui. Transportation Planning Method Based on Improved Kruskal Algorithm [J]. Computer Applications, 2021, 41(S01):4.
-
-              </p>
-
-            </li>
-
-            
-
-          </ol>
-
-        </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
-
-        <!--
-          - testimonials
-        -->
+<!-- Scroll -->
+<!--
+<div id="progressbar"></div>
+<div id="scrollPath"></div>
+-->
+<!-- Header content -->
+<header>
+<!--
+  <div class="profileLogo"> 
+    <p class="logoPlaceholder"> <img src="logoImage.png" alt="sample logo"> <span>Ah~μ</span></p>
+  </div>
+-->
+	<div class="profileContainer">
+	  <div class="profilePhoto">
+			<img src="AboutPageAssets/images/self_photo.jpg" >
+			<div class="profileLinks">
+				<ul>
+<!--
+					<li class="list active">
+						<a href="XXXXXXXXXXX" target="_blank">
+							<span class="icon">
+								<ion-icon name="document-outline"></ion-icon>
+							</span>
+							<span class="icon-text">CV</span>
+						</a>
+					</li>
+-->
+					<li class="list active">
+						<a href="mailto:qinsi.wang@duke.edu" id="emailLink">
+						<span class="icon">
+							<ion-icon name="mail-outline"></ion-icon>
+						</span>
+						<span class="icon-text">Email</span>
+						</a>
+					</li>
+					<li class="list">
+						<a href="https://github.com/wangqinsi1" target="_blank">
+							<span class="icon">
+								<ion-icon name="logo-github"></ion-icon>
+							</span>
+							<span class="icon-text">Github</span>
+						</a>
+					</li>
+					<li class="list">
+						<a href="https://scholar.google.com/citations?user=3nhZMdkAAAAJ&hl=en" target="_blank">
+							<span class="icon">
+								<ion-icon name="school-outline"></ion-icon>
+							</span>
+							<span class="icon-text">Scholar</span>
+						</a>
+					</li>
+					<li class="list">
+						<a href="https://www.linkedin.com/in/%E5%8B%A4%E6%80%9D-%E6%B1%AA-692946330/?locale=en_US" target="_blank">
+							<span class="icon">
+								<ion-icon name="logo-linkedin"></ion-icon>
+							</span>
+							<span class="icon-text">Linkedin</span>
+						</a>
+					</li>
+					<div class="indicator"></div>
+				</ul>
+			</div>
+	  </div> 
+		
+		  	<div id="wechat-modal" class="modal">
+			  <div class="modal-content">
+				<span class="close">&times;</span>
+				<img src="AboutPageAssets/images/Wechat-QR.jpg" alt="WeChat QR Code">
+			  </div>
+			</div>
+	  <!-- Identity details -->
+	  <section class="profileHeader">
+		<h1>Qinsi Wang&nbsp;</h1>
+		<hr>
+		<p>Hello! My name is Qinsi Wang. I am a first-year PhD student in the <a href="https://cei.pratt.duke.edu/" class="prof-link" target="_blank">CEI lab</a> of the Department of Electrical and Computer Engineering at Duke University. I am fortunate to be advised by <a href="https://ece.duke.edu/people/yiran-chen/" class="prof-link" target="_blank">Prof. Yiran Chen</a> and <a href="https://ece.duke.edu/people/hai-helen-li/" class="prof-link" target="_blank">Prof. Hai "Helen" Li</a>.  </p>
+	    <p>Before that, I conducted research at the University of Science and Technology of China and the National University of Singapore, where I was fortunate to be mentored by <a href="https://linsats.github.io" class="prof-link" target="_blank">Prof. Lin Shao</a>. I received my undergraduate degree in Electronic Science and Technology from Huazhong University of Science and Technology.</p>  
+	</section>
+	</div>
+	<div>
+		
+	</div>
+</header>
+	
+
+	
+<!-- content -->
+<section class="mainContent"> 
+  <!-- NEWS -->
+  <section class="section1">
+    <h2 class="sectionTitle">News&nbsp;</h2>
+	<hr class="sectionTitleRule">
+    <div class="section1Content">
+	  <p><span><span class="icon">	<ion-icon name="musical-notes-outline"></ion-icon></span> [ Oct 2024 ] : </span> Our paper <a href="https://arxiv.org/abs/2410.18311" style="color: rgba(1, 35, 57, 0.977); font-weight: bold; text-decoration: underline;">CoreInfer: Accelerating Large Language Model Inference with Semantics-Inspired Adaptive Sparse Activation</a> has been uploaded to arXiv. CoreInfer achieves a 10.33x speedup on an NVIDIA Titan XP without sacrificing performance! Visit the <a href="https://wangqinsi1.github.io/coreinfer_page/" style="color: rgba(1, 35, 57, 0.977); font-weight: bold; text-decoration: underline;">project page</a> for more information. </p>
+	  <p><span><span class="icon">	<ion-icon name="musical-notes-outline"></ion-icon></span> [ Mar 2024 ] : </span> I am excited to announce that I will join the Department of Electrical and Computer Engineering at Duke University as a PhD student in Fall 2024! Looking forward to my PhD life!</p>
+	  <p><span><span class="icon">	<ion-icon name="musical-notes-outline"></ion-icon></span> [ Sep 2023 ] : </span> Our paper <a href="https://openreview.net/pdf?id=e1l4ZYprQH" style="color: rgba(1, 35, 57, 0.977); font-weight: bold; text-decoration: underline;">MathNAS: If Blocks Have a Role in Mathematical Architecture Design</a> has been accepted by NeurIPS 2023. MathNAS achieves 82.5% top-1 accuracy on ImageNet-1k! See <a href="https://github.com/wangqinsi1/MathNAS/tree/master" style="color: rgba(1, 35, 57, 0.977); font-weight: bold; text-decoration: underline;">project page</a> for more information.</p>
+	  <p><span><span class="icon">	<ion-icon name="musical-notes-outline"></ion-icon></span> [ Apr 2023 ] : </span> Our paper <a href="https://ieeexplore.ieee.org/document/10042973" style="color: rgba(1, 35, 57, 0.977); font-weight: bold; text-decoration: underline;">DGL: Device Generic Latency model for Neural Architecture Search</a> has been accepted by the IEEE Transaction on Mobile Computing (CCF A). DGL is dedicated to accelerating the deployment of NAS on mobile devices, and has conducted experiments on 50+ different mobile phones! Visit the <a href="https://github.com/wangqinsi1/DGL" style="color: rgba(1, 35, 57, 0.977); font-weight: bold; text-decoration: underline;">project code</a> for more information. </p>
+	  <p><span><span class="icon">	<ion-icon name="musical-notes-outline"></ion-icon></span> [ Jul 2022 ] : </span> I received my B.S. from Huazhong University of Science and Technology (HUST) and received the title of Outstanding Graduate !</p>
+      <p><span><span class="icon">	<ion-icon name="musical-notes-outline"></ion-icon></span> [ Sep 2021 ] : </span> I received the China National Scholarship (0.2%)! This is the highest award given by the Ministry of Education of China for undergraduates.</p>
+	</div>
+  </section>
+	
+	<!-- PUBLICATIONS -->
+	<section class="section2">
+		<h2 class="sectionTitle">Publications&nbsp;</h2>
+<!--		<hr class="sectionTitleRule">-->
+		<hr class="sectionTitleRule2">
+
+
+	  <div class="newPaper" id="MathNAS">
+<!--
+		<div class="onlyIMG">
+			<img src="AboutPageAssets/images/img-show/MathNAS-contributions.png" alt="sample">
+		  </div>
+-->
+		  <div class="showPlace">
+			<img class="staticImage" src="AboutPageAssets/images/compare_final.gif">
+    		<img class="animatedGif" src="AboutPageAssets/images/coreinfer.jpg" style="display:none;">
+		  </div>
+		  <article class="section2Content">
+		    <h2 class="sectionContentTitle" >CoreInfer: Accelerating Large Language Model Inference with Semantics-Inspired Adaptive Sparse Activation</h2>
+			  <h3 class="sectionContentSubTitle"><strong style="color: rgb(246,251,255);">Qinsi Wang</strong>, Saeed Vahidian, Hancheng Ye, Jianyang Gu, Jianyi Zhang, Yiran Chen</h3>
+			  	<h4 class="sectionContentSubTitle">	arXiv: 2410.18311</h4>
+			  <div class="btn-contaniner">
+				  <div class="btn"><a href="https://arxiv.org/abs/2410.18311" target="_blank">PDF</a></div>
+				  <div class="btn"><a href="https://wangqinsi1.github.io/coreinfer_page/" target="_blank">Demo</a></div>
+				  <div class="btn"><a href="https://github.com/wangqinsi1/CoreInfer" target="_blank">Code</a></div>
+		 		</div>
+		  </article>
+		</div>
+		<br><br>
+
+	  <div class="newPaper" id="MathNAS">
+<!--
+		<div class="onlyIMG">
+			<img src="AboutPageAssets/images/img-show/MathNAS-contributions.png" alt="sample">
+		  </div>
+-->
+		  <div class="showPlace">
+			<img class="staticImage" src="AboutPageAssets/images/img-show/mathnas2.jpg">
+    		<img class="animatedGif" src="AboutPageAssets/images/img-show/mathnas1.jpg" style="display:none;">
+		  </div>
+		  <article class="section2Content">
+		    <h2 class="sectionContentTitle" >MathNAS: If Blocks Have a Role in Mathematical  Architecture Design</h2>
+			  <h3 class="sectionContentSubTitle"><strong style="color: rgb(246,251,255);">Qinsi Wang*</strong>, Jinghan Ke*, Zhi Liang, Sihai Zhang</h3>
+			  	<h4 class="sectionContentSubTitle">Neural Information Processing Systems (<strong>NeurIPS</strong>) 2023</h4>
+			  <div class="btn-contaniner">
+				  <div class="btn"><a href="https://openreview.net/pdf?id=e1l4ZYprQH" target="_blank">PDF</a></div>
+				  <div class="btn"><a href="https://neurips.cc/media/PosterPDFs/NeurIPS%202023/70987.png?t=1699703256.6154978" target="_blank">Poster</a></div>
+				  <div class="btn"><a href="https://github.com/wangqinsi1/MathNAS" target="_blank">Code</a></div>
+		 		</div>
+		  </article>
+		</div>
+		<br><br>
+	  <div class="newPaper" id="Diff-LfD">
+		<div class="showPlace">
+			<img class="staticImage" src="AboutPageAssets/images/dgl1.jpg" alt="Animated">
+    		<img class="animatedGif" src="AboutPageAssets/images/dgl2.jpg" alt="Animated" style="display:none;">
+		  </div>
+		  <article class="section2Content">
+		    <h2 class="sectionContentTitle">DGL: Device Generic Latency model for Neural Architecture Search&nbsp;</h2>
+			  <h3 class="sectionContentSubTitle"><strong style="color: rgb(246,251,255);">Qinsi Wang</strong>, Sihai Zhang</h3>
+			  	<h4 class="sectionContentSubTitle">IEEE Transactions on Mobile Computing, 2023</h4>
+			  <div class="btn-contaniner">
+				  <div class="btn"><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10042973" target="_blank">PDF</a></div>
+				  <div class="btn"><a href="https://github.com/wangqinsi1/DGL" target="_blank">Code</a></div>
+				  <div class="btn cite-btn" data-citation="@article{wang2023dgl,
+					title={DGL: device generic latency model for neural architecture search on mobile devices},
+					author={Wang, Qinsi and Zhang, Sihai},
+					journal={IEEE Transactions on Mobile Computing},
+					volume={23},
+					number={2},
+					pages={1954--1967},
+					year={2023},
+					publisher={IEEE}
+				  }"><a href="javascript:void(0);">Cite</a></div>
+					<div id="copy-confirmation" style="display:none; color: white;">Citation copied to clipboard!</div>
+		 		</div>
+				  </article>
+		</div>
+	</section>
 
  
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                   
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-
-
-        <!--
-          - clients
-        -->
-
-  
-
-      </article>
-
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-             <li class="timeline-item">
-
-              <h5 class="h5 timeline-item-title">National University of Singapore (NUS)</h5>
-
-              <span>2023 — 2023</span>
-
-              <p class="timeline-text">
-               R.A. in School of Computer Science and Technology. 
-              </p>
-              <p class="timeline-text"> 
-             Research directions: Reinforcement Learning and Robotics.
-              </p>
-
-            </li>
-
-
-            <li class="timeline-item">
-
-              <h5 class="h5 timeline-item-title">University of Science and Technology of China (USTC)</h5>
-
-              <span>2022 — 2023</span>                  
-
-              <p class="timeline-text">
-                R.A. in School of Microelectronics.
-              </p>
-              <p class="timeline-text">
-                Research directions: Neural Architecture Search and Mobile Computing.
-              </p> 
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h5 class="h5 timeline-item-title">Huazhong University of Science and Technology (HUST)</h5>
-
-              <span>2018 — 2022</span>
-
-              <p class="timeline-text">
-               B.S. in Electronic Science and Technology Major, School of Optics and Electronic Information. 
-              </p>
-              <p class="timeline-text"> 
- Overall GPA: 3.87/ 4.0
-              </p>
-
-            </li>
-
-            
-
-          </ol>
-
-        </section>
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Awards & Honors</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title"></h4>
-
-              <span>2022 — 2023</span>
-
-              <p class="timeline-text">
-                Excellent graduate of Huazhong University of Science and Technology.
-              </p>
-              
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title"></h4>
-
-              <span>2021 — 2022</span>
-
-              <p class="timeline-text"> 
-                Scholarship for Science and Technology Innovation of Huazhong University of Science and Technology.
-              
-              </p>
-              <p class="timeline-text"> 
-                 Scholarship for Outstanding Student Cadre of Huazhong University of Science and Technology.
-              
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title"></h4>
-
-              <span>2020 — 2021</span>
-
-              <p class="timeline-text">
-               Honorable Mention in the Interdisciplinary Contest In Modeling (MCM/ ICM). (team leader)
-              </p>
-              <p class="timeline-text">
-                Second Prize in the Chinese Mathematical Contest In Modeling. (team leader)
-              </p>
-               <p class="timeline-text">
-               Second Prize in the Asia and Pacific Mathematical Contest In Modeling. (team leader)
-              </p>
-
-              <p class="timeline-text">
-                Third Prize in the MathorCup Mathematical Contest In Modeling. (team leader)
-              </p>
-
-            </li>
-            
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title"></h4>
-
-              <span>2019 — 2020</span>
-
-              <p class="timeline-text">
-                <b> *China National Scholarship (0.2%). </b> 
-              </p>
-
-              <p class="timeline-text">
-               First Prize in The Chinese Mathematics Competitions. 
-              </p>
-
-              <p class="timeline-text">
-                Merit Student of Huazhong University of Science and Technology (5%). 
-              </p>
-
-
-            </li>
-
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title"></h4>
-
-              <span>2018 — 2019</span>
-
-              <p class="timeline-text">
-                Merit Student of Huazhong University of Science and Technology (5%).
-              </p> 
-              <p class="timeline-text">
-                Scholarship for Science and Technology Innovation of Huazhong University of Science and Technology.
-              </p>
-
-              <p class="timeline-text">
-                Scholarship for Self-improvement of Huazhong University of Science and Technology.
-              </p>
-
-            </li>
-          </ol>
-
-        </section>
-
-       
- <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Python</h5>
-                <span>&emsp;</span> 
-                <data value="95">I am proficient in pytorch, and I have built, trained and tested DNN models many times (such as ResNet, YOLOv4 and MobilNet-V3). </data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Linux </h5>
-                <span>&emsp;</span> 
-                <span>&emsp14;</span> 
-                <span>&emsp14;</span>
-                <data value="90">I often work with linux systems and I am familiar with its commands. I have managed and used edge devices such as Nvidia Jetson TX2, Jetson NX, which are all linux operating systems.</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Android</h5>
-                <span>&emsp;</span> 
-                <data value="80">I master the basic use of Android Studio. In my previous project, I used Android Studio to deploy pytorch models on mobile devices.</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">C/C++</h5>
-                 <span>&emsp;&emsp14;</span> 
-
-
-                <data value="50">I have learned C++ in class and I have done several course projects in C++. If necessary, I will learn C/C++ more and become proficient in it.</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Matlab</h5>
-                 <span>&emsp;</span> 
-                <span>&emsp14;</span>
-
-                <data value="80">I can skillfully use Matlab to complete various mathematical operations, as well as the training and testing of neural networks.</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-
-
-
-
-
-            
-
-          </ul>
-
-        </section>
-
-
-
-
-
-      </article>
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="porject" data-page="porject">
-
-        <header>
-          <h2 class="h2 article-title">Porject</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item"> 
-              <button data-filter-btn>ALL</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Machine Learning</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Reinforcement Learning</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Mathematical Modeling</button>
-            </li>
-
-
-            <li class="filter-item">
-              <button data-filter-btn>Other Projects</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>ALL</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Machine Learning</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Reinforcement Learning</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Mathematical Modeling</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Other Projects</button>
-              </li>
-
-            </ul>
-
-          </div>
-          
-          <ul class="project-list">
-
-            <li class="project-item active" id="project1" data-filter-item data-category="all" style="cursor:pointer;">
-               
-                
-
-                <figure class="project-img"> 
-
-                  <img src="./assets/images/test14.png" alt="finance"  >
-                </figure>
-
-                <h3 class="project-title">Machine Learning</h3>
-
-                <p class="project-category">Neural Architecture Search </p>
-                <p class="project-category">Mobile Computing</p>
-
-             
-            </li>
-
-
-
-
-            <li class="project-item active" id="project2" data-filter-item data-category="all" style="cursor:pointer;">
-               
-              
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/test26.png" alt="orizon"  >
-                </figure>
-
-                <h3 class="project-title">Reinforcement Learning</h3>
-
-                <p class="project-category">Robotic Manipulation Skill</p>
-                <p class="project-category">Algorithm Optimization</p>
-
-              
-            </li>
-
-            <li class="project-item  active" id="project3" data-filter-item data-category="all" style="cursor:pointer;">
-               
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/test17.png"  alt="fundo"  >
-                </figure>
-
-                <h3 class="project-title">Mathematical Modeling</h3>
-                <p class="project-category">Invasive Insect Image Recognition</p>
-                 <p class="project-category">Transportation Planning</p>
-                
-
-              
-            </li>
-
-            <li class="project-item  active" id="project4" data-filter-item data-category="all" style="cursor:pointer;">
-         
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/test16.png" alt="brawlhalla"  >
-                </figure>
-
-                <h3 class="project-title">Other Projects</h3>
-                <p class="project-category">Image Segmentation </p>
-                <p class="project-category">Image Retrieval  </p>
-                <p class="project-category"> Handwritten Word Recognition</p>
-                <p class="project-category"> Contour Extraction</p>
-              <p class="project-category"> Lyric Prediction</p>  
-
-              
-            </li>
-
-
-
-
-
-
-
-            
-            <li class="project-item" data-filter-item data-category="machine learning">
-               
-               
-                
-                 
-            
-          
-        
-            <figure class="project-img project-img-zoom" >
-
-                  <img src="./assets/images/project3.png" alt="finance"  >
-            </figure>
-             <br>
-               <br>
-            <figure class="project-img project-img-zoom" >
-
-                  <img src="./assets/images/project4.png" alt="finance"  >
-            </figure>
-            
-            
-         
-            </li>
-            <li class="project-item" width=800px data-filter-item data-category="machine learning">
-
-          
-            <h3 class="project-title2 "> MathNAS: If Blocks Have a Role in Mathematical Architecture Design</h3>  
-            <h3 class="project-title3"> NeurIPS2023
-              &nbsp;
-               <a href="https://neurips.cc/virtual/2023/poster/70987" style="display:inline;"> Paper </a>
-              &nbsp;
-               <a href="https://github.com/wangqinsi1/MathNAS/tree/master" style="display:inline;"> Code </a>
-               </h3> 
-
-            <h3 class="project-title1" > Wang Qinsi*, Jinhan Ke*, Zhi Liang, Sihai Zhang </h3> 
-
-            <h3 class="project-title1" >
-              <b> Task </b>: Image classification/text translation.
-            <br />
-              <b> What </b>: Automatic design of neural network architecture.
-           <br />
-              <b> Motivation </b>: The design of network architecture for specific tasks and specific resource constraints requires considerable time and computing power costs.
-            <br />
-              <b> Insights </b>: We propose a block performance evaluation formula and decompose the network design into the block designs.
-            <br />
-              <b> Advantages </b>: Reduces the cost of network architecture design from exponential level to polynomial level.</h3> 
-           
-         
-
-        
-           <br>
-
-           <h3 class="project-title2">DGL: Device Generic Latency Model for Neural Architecture Search on Mobile Devices</h3>  
-           <h3 class="project-title3"> IEEE TMC 2023
-              &nbsp;
-               <a href="https://ieeexplore.ieee.org/document/10042973" style="display:inline;"> Paper </a>
-               </h3> 
-             
-             <h3 class="project-title1" > Wang Qinsi, Sihai Zhang </h3> 
-
-            <h3 class="project-title1" > 
-            <b> Task </b>: Image classification.
-              <br />
-            <b> What </b>: Neural network architecture design on mobile devices.
-            <br />
-            <b> Motivation </b>: Designing network architecture for specific devices and latency constraints is difficult.
-             <br />
-            <b> Insights </b>: We propose a network latency prediction formula by considering specific hardware configuration parameters.
-             <br />
-            <b> Advantages </b>: For specific mobile devices, a network that meets latency requirements can be quickly designed without prior deployment.</h3> 
-
-            
-
-
-
-
-            </li> 
-
-
-
-
-
-
-
-          <li class="project-item" data-filter-item data-category="reinforcement learning">
-               
-
-                <figure class="project-img project-img-zoom">
-
-                  <img src="./assets/images/project5.png" alt="finance"  >
-                </figure>
-                <br>
-                 <figure class="project-img project-img-zoom"> 
-
-                  <img src="./assets/images/project6.png" alt=" " >
-                </figure>
-                
-             
-             
-            </li>
-            <li class="project-item" width=500px data-filter-item data-category="reinforcement learning">
-
-            <h3 class="project-title2">Diff-Transfer: Model-based Robotic Manipulation Skill Transfer via Differentiable Physics Simulation</h3>  
-           <h3 class="project-title3"> Submitted to ICLR 2023
-              &nbsp;
-               <a href="https://arxiv.org/abs/2310.04930" style="display:inline;"> Paper </a>
-               &nbsp;
-               <a href="https://sites.google.com/view/difftransfer" style="display:inline;"> Vedio </a>
-               </h3> 
-             
-             <h3 class="project-title1" > Yuqi Xiang, Feitong Chen, Qinsi Wang, Gang Yang, Xiang Zhang, Xinghao Zhu, Xingyu Liu, Lin Shao </h3> 
-
-            <h3 class="project-title1" > 
-            <b> Task </b>: Control the robotic arm to close the grill/change the clock/open the door/open the drawer.
-              <br />
-            <b> What </b>: Transfer learning in the field of robotics.
-            <br />
-            <b> Motivation </b>: For intelligent robots, the ability to transfer mastered skills to complete a range of similar but novel tasks is crucial.
-             <br />
-            <b> Insights </b>: We introduce Diff-Transfer, a novel framework that leverages differentiable physics simulations to efficiently transfer robotic skills.
-             <br />
-            <b> Advantages </b>: The robot can quickly learn challenging transfer tasks. </h3> 
-           
-            
-
-
-
-            <br>
-
-           <h3 class="project-title2">Differentiable Actor-Critic: Efficient Use of Gradients in Model-free RL</h3>  
-           <h3 class="project-title3"> The project is ongoing.
-               </h3> 
-             
-             <h3 class="project-title1" > Wang Qinsi, Lin Shao </h3> 
-
-            <h3 class="project-title1" > 
-            <b> Task </b>: Reinforcement learning control task.
-              <br />
-            <b> What </b>: Gradient-based model-free reinforcement learning algorithms.
-            <br />
-            <b> Motivation </b>: Model-free reinforcement learning algorithms are severely limited in their applicability to complex real-world domains due to the large amounts of training data they require.
-             <br />
-            <b> Insights </b>: We blend gradient-based methods with model-free methods, gaining the benefits of both.
-             <br />
-            <b> Advantages </b>: Fast training of reinforcement learning algorithms.</h3> 
-            
-
-             
-
-
-            </li> 
-    
-
-
-
-
-
-
-
-          <li class="project-item" data-filter-item data-category="mathematical modeling">
-               <figure class="project-img project-img-zoom">
-
-                  <img src="./assets/images/project7.png" alt="finance"  >
-                </figure>
-
-                <br>
-                 <figure class="project-img project-img-zoom"> 
-
-                  <img src="./assets/images/project8.png" alt=" "  >
-                </figure>
-                
-
-                
-             
-             </li>
-            <li class="project-item" width=500px data-filter-item data-category="mathematical modeling">
-           
-           <h3 class="project-title2"> Research on Invasive Insect Image Recognition Based on Artificial Intelligence</h3>  
-            <h3 class="project-title3"> ICBAIE 2021
-              &nbsp;
-               <a href="https://ieeexplore.ieee.org/document/9389971" style="display:inline;"> Paper </a>
-               </h3> 
-
-            <h3 class="project-title1" > Wang Qinsi, Jiang Xueyi, Xiao Xiaolong, Wang Xueshun </h3> 
-
-            <h3 class="project-title1" >
-              <b> Task </b>: Image recognition.
-            <br />
-              <b> What </b>: Optimization of recognition algorithms for real-world problems.
-           <br />
-              <b> Motivation </b>: There are problems with poor quality and a small proportion of correct samples when performing image recognition of insect pictures.
-            <br />
-              <b> Insights </b>: We combine image recognition with species distribution and propose a new framework to improve accuracy in practical applications.
-            <br />
-              <b> Advantages </b>: Significantly improves sample recognition accuracy on real-world data sets.</h3> 
-
-             
-            <br>
-
-            <h3 class="project-title2"> Transportation Planning Method Based on Improved Kruskal Algorithm </h3>  
-            <h3 class="project-title3"> Computer Applications 2021
-              &nbsp;
-               <a href="https://d.wanfangdata.com.cn/periodical/jsjyy2021z1025" style="display:inline;"> Paper </a>
-               </h3> 
-
-            <h3 class="project-title1" > Wang Qinsi, He Yuhui</h3> 
-
-            <h3 class="project-title1" >
-              <b> Task </b>: Transportation planning.
-            <br />
-              <b> What </b>: An effective transportation planning method for transportation planning problems with transfer center constraints.
-           <br />
-              <b> Motivation </b>: Transportation problem with links is an NP problem.
-            <br />
-              <b> Insights </b>: We build a minimum spanning tree model with constraints from the perspective of graph theory and improve Kruskal algorithm.
-            <br />
-              <b> Advantages </b>: Provides relatively accurate and complete solutions to this type of transportation planning problem.</h3> 
-
-
-
-
-
-            </li> 
-            
-
-
-
-
-
-
-
-
-
-                    <li class="project-item" data-filter-item data-category="other projects">
-               <figure class="project-img project-img-zoom">
-
-                  <img src="./assets/images/project9.png" alt="finance"  >
-                </figure>
-                 <figure class="project-img project-img-zoom"> 
-
-                  <img src="./assets/images/project10.png" alt=" " >
-                </figure>
-                 <figure class="project-img project-img-zoom"> 
-
-                  <img src="./assets/images/test3.png" alt=" "  >
-                </figure>
-                <figure class="project-img project-img-zoom"> 
-
-                  <img src="./assets/images/project11.png" alt=" "  >
-                </figure>
-                <figure class="project-img project-img-zoom"> 
-
-                  <img src="./assets/images/project12.png" alt=" "  >
-                </figure>
-                
-             
-            </li>
-            <li class="project-item" width=600px data-filter-item data-category="other projects">
-              
-           
-
-            <h3 class="project-title2">Image Segmentation Based on Level Set</h3>  
-             
-            <h3 class="project-title1" >
-            <b>Task </b>:Use level set segmentation algorithm to complete image segmentation with python.
-Excellent segmentation is achieved on multiple classic images such as cups, twocells and vessels.</h3> 
-
-             
-
-            <br>  
-            <br>
-            <br>
-
-            <h3 class="project-title2">Image Retrieval Based on Inverted Index</h3>  
-            <h3 class="project-title1"> 
-            <b>Task</b>: The SIFT features of 1000 images are randomly sampled. And the hierarchical k-means algorithm is used to train the visual codebook (codebook size is 10000). L2 normalization is used to process the visual histogram.  The inverted index is used for the final output. </h3>
-
-            <br>
-            <br>
-            
-             <h3 class="project-title2">Handwritten Word Recognition</h3>  
-            <h3 class="project-title1">
-            <b>Task</b>:  A multinomial logistic regression model is used for image classification to recognize each letter separately. The conditional probability formula for words is constructed by considering the letter classification and the probability of consecutive occurrence of two adjacent letters. The Viterbi algorithm is used to find the sequence of letters that maximizes the conditional probability of a word to achieve word recognition. </h3>
-            <br>
-
-            <h3 class="project-title2">Contour Extraction</h3>  
-            <h3 class="project-title1">
-            <b>Task</b>: Laplacian and Sobel operators are used to extract contours. The program is optimized to be more suitable for GPU parallel computing, and obtains a speedup ratio of 30 compared to CPU. </h3> 
-          
-
-            <br>
-            <br>
-            <br>
-            <h3 class="project-title2">Lyric Prediction</h3>  
-             
-            <h3 class="project-title1" >
-             <b>Task</b>: 1000 lyrics (from Jay Chou's songs) are used as training samples. Character indices are built and onehot vectors are used as input to the network. A recurrent neural network is trained and used for lyrics prediction. This project is my work when I participated in the 2020 Public Welfare AI Learning Together Training Camp. 
-           </h3>
- 
-
-
-
-
-            </li> 
-            
-
-
-
-
-
-
-
-
-
-
-             
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-
- 
-
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="personal">
-
-        <header>
-          <h2 class="h2 article-title">Personal</h2>
-        </header>
-
-
-
-                    <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Hobby</h3>
-          <section class="about-text">
-          <p>
-           I love photography and travel, here are some of my photography works.
-         </p> 
-        </section>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="project-img">
-
-                  <img src="./assets/images/test18.jpg" alt="finance"  >
-                </figure>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="project-img">
-
-                  <img src="./assets/images/test19.jpg" alt="finance"  >
-                </figure>
-
-              </div>
-            </li>
-
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="project-img">
-
-                  <img src="./assets/images/test20.jpg" alt="finance"  >
-                </figure>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="project-img">
-
-                  <img src="./assets/images/test21.jpg" alt="finance"  >
-                </figure>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="project-img">
-
-                  <img src="./assets/images/test22.jpg" alt="finance"  >
-                </figure>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="project-img">
-
-                  <img src="./assets/images/test23.jpg" alt="finance"  >
-                </figure>
-
-              </div>
-            </li>
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="project-img">
-
-                  <img src="./assets/images/test24.jpg" alt="finance"  >
-                </figure>
-
-              </div>
-            </li>
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="project-img">
-
-                  <img src="./assets/images/test25.jpg" alt="finance"  >
-                </figure>
-
-              </div>
-            </li>
-
-
-
-
-
-          </ul>
-
-        </section>
-
-      
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact</h3>
-          
-          <section class="about-text">
-          <p>
-           Email:   wqs@mail.ustc.edu.cn/ wangqinsi1@outlook.com
-         </p> 
-          <p>
-           Phone: +86 15972166062
-         </p> 
-        </section>
-
-
-          
-        </section>
-
-      </article>
-
-    </div>
-
-  </main>
-
-
-
-
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+	<section class="section1" style="margin-top: 80px;">
+		<h2 class="sectionTitle">Hobby&nbsp;</h2>
+		<hr class="sectionTitleRule">
+		<p>I love photography and travel, here are some of my favorite photography works and wonderful life moments!</p>
+	  </section>
+</section>
+	
+
+</section>
+<br><br>
+
+		<div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+				<h2 class="sectionTitle">Happy &lt;- </h2>
+			<img class="image" src="AboutPageAssets/images/gallery/1.jpg" draggable="false" />
+			<img class="image" src="AboutPageAssets/images/gallery/2.jpg" draggable="false" />
+				
+				<img class="image" src="AboutPageAssets/images/gallery/4.jpg" draggable="false" />
+				<img class="image" src="AboutPageAssets/images/gallery/13.jpg" draggable="false" />
+				<img class="image" src="AboutPageAssets/images/gallery/14.jpg" draggable="false" />
+				<img class="image" src="AboutPageAssets/images/gallery/10.jpg" draggable="false" />
+			<!--
+				<img class="image" src="AboutPageAssets/images/gallery/6.jpg" draggable="false" />
+				<img class="image" src="AboutPageAssets/images/gallery/7.jpg" draggable="false" />
+			-->
+				<img class="image" src="AboutPageAssets/images/gallery/8.jpg" draggable="false" />
+				<!-- <img class="image" src="AboutPageAssets/images/gallery/Emei Mountain.jpg" draggable="false" /> -->
+			<!--		<img class="image" src="AboutPageAssets/images/gallery/9.jpg" draggable="false" />-->
+				
+				<img class="image" src="AboutPageAssets/images/gallery/12.jpg" draggable="false" />
+			<!--		<img class="image" src="AboutPageAssets/images/gallery/11.jpg" draggable="false" />-->
+				
+				<img class="image" src="AboutPageAssets/images/gallery/11.jpg" draggable="false" />
+				<img class="image" src="AboutPageAssets/images/gallery/15.jpg" draggable="false" />
+				<img class="image" src="AboutPageAssets/images/gallery/5.jpg" draggable="false" />
+				<img class="image" src="AboutPageAssets/images/gallery/3.jpg" draggable="false" />
+				<img class="image" src="AboutPageAssets/images/gallery/16.jpg" draggable="false" />
+				
+			<!--		<img class="image" src="AboutPageAssets/images/gallery/haha.jpg" draggable="false" />-->
+		</div>
+
+
+	
+
+<footer>
+  <hr>
+  <!-- <p class="footerDisclaimer">Feel free to download this website's <a href="https://github.com/Ah-miu/Ah-miu.github.io" class="prof-link" target="_blank">source code</a>, just add a link back to my website.</p> -->
+  <p class="footerNote">This website is designed by <a href="https://ah-miu.github.io/" style="text-decoration: underline;">Jinghan Ke</a>&nbsp; &nbsp; <span>&nbsp;</span></p>
+</footer>
+
+<!--
+<div id="citation-modal" style="display:none;">
+  <button class="close-modal" onclick="document.getElementById('citation-modal').style.display='none'">&times;</button>
+  <div id="citation-content"></div>
+  <button id="copy-citation">Copy</button>
+</div>
+-->
+<!--
+<script type="text/javascript">
+	let progress = document.getElementById('progressbar');
+	let totalHeight = document.body.scrollHeight - window.innerHeight;
+	window.onscroll = function(){
+		let progressHeight = (window.pageYOffset / totalHeight) * 100;
+		progress.style.height = progressHeight + "%";
+	}
+</script>
+-->
+	
+<script>
+	const list = document.querySelectorAll('.list');
+	function activeLink(){
+		list.forEach((item) =>
+		item.classList.remove( 'active'));
+		this.classList.add( 'active')
+	}
+	list.forEach((item) =>
+	item.addEventListener( 'click',activeLink));
+
+</script>
+<script src="AboutPageAssets/styles/aboutPageStyle.js"></script>
 </body>
-
 </html>
