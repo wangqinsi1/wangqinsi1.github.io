@@ -914,15 +914,16 @@ footer {
 
 #image-track {
   display: flex;
-  gap: 2vmin;
-  position: relative;          /* 改为相对定位更稳 */
-  left: 50%;
-  transform: translateX(-50%); /* 只水平居中即可 */
-  max-width: 100vw;            /* 不超过视口宽度 */
-  padding: 1rem 2vmin;
-  overflow: hidden;            /* 超出裁切，防止溢出 */
-  animation: slideToLeft 60s linear infinite;
-  margin-top: 10px;
+  gap: 4vmin;
+  position: relative;  /* 改为相对定位，不脱离文档流 */
+  left: 0;             /* 不要手动位移 */
+  transform: none;     /* 去掉 translate */
+  width: 100%;
+  justify-content: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;    /* 如果图片太多，可以横向滚动 */
+  scroll-behavior: smooth;
+  margin: 20px auto;   /* 距离标题一点间距 */
 }
 
 /* 2) 图片改为“自适应宽度 + 固定宽高比”，避免固定像素/视口单位过大 */
