@@ -901,7 +901,7 @@ footer {
 
 /*gallery自动滑动有bug*/
 
-/* @keyframes slideToLeft {
+@keyframes slideToLeft {
 	0%, 100% {
 	  transform: translate(0%, -50%);
 	}
@@ -910,50 +910,15 @@ footer {
 	}
   } */
 
-@keyframes slideToLeft {
-  0%, 100% { transform: translateX(0%); }
-  50%      { transform: translateX(-50%); } /* 自行调整位移量 */
-}
+ 
+
 
 #image-track {
-  display: flex;
-  gap: 4vmin;
-  position: relative;     /* 保持相对定位，不脱离文档流 */
-  width: 100%;
-  justify-content: center;
-  flex-wrap: nowrap;
-  overflow-x: auto;       /* 图片多时可横向滚动 */
-  scroll-behavior: smooth;
-  margin: 20px auto;
-  transform: none;        /* 不要静态 transform */
-  left: auto;             /* 不要 left 偏移 */
-  animation: slideToLeft 60s linear infinite; /* 用上面的仅X轴动画 */
-}
-
-/* 2) 图片改为“自适应宽度 + 固定宽高比”，避免固定像素/视口单位过大 */
-#image-track > .image {
-  border-radius: 15px;
-  width: clamp(140px, 22vw, 260px);
-  aspect-ratio: 2 / 3;
-  height: auto;
-  object-fit: cover;
-  object-position: center center;
-}
-@media (max-width: 768px) {
-  #image-track { gap: 3vmin; }
-  #image-track > .image { width: clamp(120px, 40vw, 200px); }
-}
-@media (max-height: 700px) {
-  #image-track > .image { max-height: 60vh; }
-}
-
-
-/* #image-track {
 	display: flex;
 	gap: 4vmin;
 	position: absolute;
 	left: 30%; /*调整第一张初始位置*/
-	/* transform: translate(0%, -50%); 
+	transform: translate(0%, -50%); 
 	user-select: none;
 	animation: slideToLeft 60s linear infinite;
 	margin-top: 10px;
@@ -965,7 +930,7 @@ width: 40vmin;
 height: 56vmin;
 object-fit: cover;
 object-position: 100% center;
-} */
+}
 
 #citation-modal {
 position: fixed;
