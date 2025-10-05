@@ -926,8 +926,8 @@ footer {
 
 #image-track > .image {
 	border-radius: 15px;
-width: 40vmin;
-height: 56vmin;
+width: 30vmin;
+height: 42vmin;
 object-fit: cover;
 object-position: 100% center;
 }
