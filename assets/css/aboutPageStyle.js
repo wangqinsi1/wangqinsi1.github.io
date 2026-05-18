@@ -29,71 +29,118 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	
 
 
-  // 悬浮窗显示功能
-  const wechatButton = document.querySelector(".list a[href='#wetchat']");
+  // 悬浮窗显示功能 (only wire up if the wechat modal exists)
   const wechatModal = document.getElementById("wechat-modal");
-  const closeBtn = wechatModal.querySelector(".close");
+  if (wechatModal) {
+    const wechatButton = document.querySelector(".list a[href='#wetchat']");
+    const closeBtn = wechatModal.querySelector(".close");
 
-  wechatButton.addEventListener('click', () => {
-    wechatModal.style.display = "block";
-  });
-
-  closeBtn.addEventListener('click', () => {
-    wechatModal.style.display = "none";
-  });
-
-  window.addEventListener('click', e => {
-    if (e.target === wechatModal) {
-      wechatModal.style.display = "none";
+    if (wechatButton) {
+      wechatButton.addEventListener('click', () => {
+        wechatModal.style.display = "block";
+      });
     }
-  });
-	
-	// gallery
-	const track = document.getElementById("image-track");
 
-	const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        wechatModal.style.display = "none";
+      });
+    }
 
-	const handleOnUp = () => {
-	  track.dataset.mouseDownAt = "0";  
-	  track.dataset.prevPercentage = track.dataset.percentage;
+    window.addEventListener('click', e => {
+      if (e.target === wechatModal) {
+        wechatModal.style.display = "none";
+      }
+    });
+  }
+
+	// gallery — JS-driven auto-scroll with click-to-speed-up controls
+	const galleryTrack = document.getElementById("image-track");
+	const galleryWrapper = document.querySelector(".gallery-wrapper");
+
+	if (galleryTrack && galleryWrapper) {
+	  // Clone images once so the marquee can wrap seamlessly
+	  Array.from(galleryTrack.querySelectorAll('.image')).forEach(img => {
+	    const clone = img.cloneNode(true);
+	    clone.setAttribute('aria-hidden', 'true');
+	    galleryTrack.appendChild(clone);
+	  });
+
+	  const SLOW_SPEED = -40;  // px/sec, default leftward drift (negative = left)
+	  const FAST_SPEED = 320;  // px/sec while mouse button is held
+
+	  let trackHalfWidth = 0;
+	  let position = 0;
+	  let speed = SLOW_SPEED;  // positive = rightward, negative = leftward
+	  let isHolding = false;
+	  let pointerSide = 1;     // -1 left half, +1 right half
+	  let initialized = false;
+
+	  const measure = () => {
+	    const half = galleryTrack.scrollWidth / 2;
+	    if (half > 0) {
+	      trackHalfWidth = half;
+	      if (!initialized) {
+	        position = -trackHalfWidth;
+	        initialized = true;
+	      }
+	    }
+	  };
+	  measure();
+	  window.addEventListener('load', measure);
+	  window.addEventListener('resize', measure);
+
+	  let lastTime = performance.now();
+	  const tick = (now) => {
+	    const dt = Math.min((now - lastTime) / 1000, 0.05);
+	    lastTime = now;
+	    if (trackHalfWidth > 0) {
+	      position += speed * dt;
+	      while (position > 0) position -= trackHalfWidth;
+	      while (position < -trackHalfWidth) position += trackHalfWidth;
+	      galleryTrack.style.transform = `translateX(${position}px)`;
+	    }
+	    requestAnimationFrame(tick);
+	  };
+	  requestAnimationFrame((now) => { lastTime = now; tick(now); });
+
+	  const updateSide = (clientX) => {
+	    const rect = galleryWrapper.getBoundingClientRect();
+	    pointerSide = (clientX - rect.left) < rect.width / 2 ? -1 : 1;
+	    galleryWrapper.classList.toggle('hover-left', pointerSide === -1);
+	    galleryWrapper.classList.toggle('hover-right', pointerSide === 1);
+	  };
+
+	  galleryWrapper.addEventListener('mousemove', (e) => {
+	    updateSide(e.clientX);
+	    if (isHolding) speed = pointerSide * FAST_SPEED;
+	  });
+
+	  galleryWrapper.addEventListener('mousedown', (e) => {
+	    isHolding = true;
+	    updateSide(e.clientX);
+	    speed = pointerSide * FAST_SPEED;
+	  });
+
+	  const endHold = () => {
+	    if (!isHolding) return;
+	    isHolding = false;
+	    speed = SLOW_SPEED;
+	  };
+	  galleryWrapper.addEventListener('mouseup', endHold);
+	  galleryWrapper.addEventListener('mouseleave', () => {
+	    endHold();
+	    galleryWrapper.classList.remove('hover-left', 'hover-right');
+	  });
+
+	  galleryWrapper.addEventListener('touchstart', (e) => {
+	    isHolding = true;
+	    updateSide(e.touches[0].clientX);
+	    speed = pointerSide * FAST_SPEED;
+	  }, { passive: true });
+	  galleryWrapper.addEventListener('touchend', endHold);
+	  galleryWrapper.addEventListener('touchcancel', endHold);
 	}
-
-	const handleOnMove = e => {
-	  if(track.dataset.mouseDownAt === "0") return;
-
-	  const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
-			maxDelta = window.innerWidth / 2;
-
-	  const percentage = (mouseDelta / maxDelta) * -100,
-			nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
-			nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
-
-	  track.dataset.percentage = nextPercentage;
-
-	  track.animate({
-		transform: `translate(${nextPercentage}%, -50%)`
-	  }, { duration: 1200, fill: "forwards" });
-
-	  for(const image of track.getElementsByClassName("image")) {
-		image.animate({
-		  objectPosition: `${100 + nextPercentage}% center`
-		}, { duration: 1200, fill: "forwards" });
-	  }
-	}
-
-	/* -- Had to add extra lines for touch events -- */
-
-	window.onmousedown = e => handleOnDown(e);
-
-	window.ontouchstart = e => handleOnDown(e.touches[0]);
-
-	window.onmouseup = e => handleOnUp(e);
-
-	window.ontouchend = e => handleOnUp(e.touches[0]);
-
-	window.onmousemove = e => handleOnMove(e);
-
-	window.ontouchmove = e => handleOnMove(e.touches[0]);
 	
 	// for email
 	document.getElementById('emailLink').addEventListener('click', function(event) {
